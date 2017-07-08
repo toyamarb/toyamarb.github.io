@@ -23,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ja.js"></script>
     <script src="/script.js"></script>
-    <script src="https://connpass.com/api/v1/event/?series_id=2557&order=3&count=1&callback=callback"></script>
+    <script src="https://connpass.com/api/v1/event/?series_id=2557&order=3&count=4&callback=callback"></script>
     <title>Toyama.rb</title>
   </head>
 
@@ -68,6 +68,29 @@
               <h1 class="title">Toyama.rb?</h1>
               <p>富山県とその周辺地域のRubyistのためのコミュニティです。主催者は <a href="https://twitter.com/mugi_uno" target="_blank">@mugi_uno</a> です。</p>
               <p>富山市内を中心に活動しています。</p>
+
+              <div class="recently">
+                <h2>
+                  <span class="icon is-small">
+                    <i class="fa fa-calendar-check-o"></i>
+                  </span>
+                  最近のイベント
+                </h2>
+
+                <ul id="recentry_events" class="trb-list events"></ul>
+                <script type="text/template" id="recentry_events_template">
+                  <% _.forEach(events, (event) => { %>
+                    <li>
+                      <a target="_blank" href="<%- event.event_url %>">
+                        <%- event.date %>: <%- event.title %>
+                        <span class="icon is-small">
+                          <i class="fa fa-external-link"></i>
+                        </span>
+                      </a>
+                    </li>
+                  <% }) %>
+                </script>
+              </div>
             </div>
 
             <div class="section-field">
