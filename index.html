@@ -8,7 +8,12 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ja.js"></script>
+    <script src="/script.js"></script>
+    <script src="https://connpass.com/api/v1/event/?series_id=2557&order=3&count=1&callback=callback"></script>
     <title>Toyama.rb</title>
   </head>
 
@@ -19,10 +24,28 @@
           <div class="has-text-centered">
             <img class="logo" src="/logo.png" />
           </div>
-          <h2 class="subtitle has-text-centered">
-            NEXT: 7/8 13:00-18:00 </br>
-            富山まちなか研究室MAGnet
-          </h2>
+          <h2 id="next" class="subtitle has-text-centered"></h2>
+          <script type="text/template" id="next_template">
+            <a target="_blank" href="<%- event_url %>">
+              <%- title %>
+              <span class="icon is-small">
+                <i class="fa fa-external-link"></i>
+              </span>
+            </a>
+            </br>
+            <span class="next-time">
+              <span class="icon is-small">
+                <i class="fa fa-calendar"></i>
+              </span>
+              <%- started_at %>-<%- ended_at %></br>
+            </span>
+            <span class="place">
+              <span class="icon is-small">
+                <i class="fa fa-map-marker"></i>
+              </span>
+              <%- place %></br>
+            </span>
+          </script>
         </div>
       </div>
     </section>
@@ -30,7 +53,7 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-offset-one-quarter">
+          <div class="column is-offset-1-tablet is-offset-2-desktop">
             <div class="section-field">
               <h1 class="title">Toyama.rb?</h1>
               <p>富山県とその周辺地域のRubyistのためのコミュニティです。主催者は <a href="https://twitter.com/mugi_uno" target="_blank">@mugi_uno</a> です。</p>
