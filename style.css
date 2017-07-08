@@ -2,6 +2,10 @@
   max-height: 200px;
 }
 
+#next {
+  margin-top: 20px;
+}
+
 .next-time {
   font-size: 0.9rem;
 }

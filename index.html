@@ -26,18 +26,24 @@
           </div>
           <h2 id="next" class="subtitle has-text-centered"></h2>
           <script type="text/template" id="next_template">
-            NEXT</br>
+            <a target="_blank" href="<%- event_url %>">
+              <%- title %>
+              <span class="icon is-small">
+                <i class="fa fa-external-link"></i>
+              </span>
+            </a>
+            </br>
             <span class="next-time">
-              <span class="icon">
+              <span class="icon is-small">
                 <i class="fa fa-calendar"></i>
               </span>
               <%- started_at %>-<%- ended_at %></br>
             </span>
             <span class="place">
-              <span class="icon">
+              <span class="icon is-small">
                 <i class="fa fa-map-marker"></i>
               </span>
-              <%- place %>
+              <%- place %></br>
             </span>
           </script>
         </div>
