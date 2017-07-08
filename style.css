@@ -1,0 +1,29 @@
+.logo {
+  max-height: 200px;
+}
+
+.section-field {
+  margin-bottom: 40px;
+}
+
+.trb-list {
+  padding-top: 15px;
+  padding-left: 20px;
+}
+.trb-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.trb-list li::before {
+  display: block;
+  content: '●';
+  position: absolute;
+  left: 0px;
+}
+
+
+.footer {
+  padding: 3rem 1.5rem 3rem;
+}
