@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app.jsx';
 
-ReactDOM.render(
-  document.getElementById('#app'), App
-);
+window.callback = (data) => {
+  ReactDOM.render(
+    <App />, document.getElementById('app')
+  );
+};

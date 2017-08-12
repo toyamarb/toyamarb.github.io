@@ -18,12 +18,6 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ja.js"></script>
-    <script src="/script.js"></script>
-    <script src="https://connpass.com/api/v1/event/?series_id=2557&order=3&count=4&callback=callback"></script>
     <title>Toyama.rb</title>
   </head>
 
@@ -78,6 +72,7 @@
                 </h2>
 
                 <ul id="recentry_events" class="trb-list events"></ul>
+                <div id="app"></div>
                 <script type="text/template" id="recentry_events_template">
                   <% _.forEach(events, (event) => { %>
                     <li>
@@ -147,5 +142,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="/bundle.js"></script>
+    <script src="https://connpass.com/api/v1/event/?series_id=2557&order=3&count=4&callback=callback"></script>
   </body>
 </html>
