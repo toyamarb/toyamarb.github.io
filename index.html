@@ -71,20 +71,7 @@
                   最近のイベント
                 </h2>
 
-                <ul id="recentry_events" class="trb-list events"></ul>
-                <div id="app"></div>
-                <script type="text/template" id="recentry_events_template">
-                  <% _.forEach(events, (event) => { %>
-                    <li>
-                      <a target="_blank" href="<%- event.event_url %>">
-                        <%- event.date %>: <%- event.title %>
-                        <span class="icon is-small">
-                          <i class="fa fa-external-link"></i>
-                        </span>
-                      </a>
-                    </li>
-                  <% }) %>
-                </script>
+                <div id="recently_events"></div>
               </div>
             </div>
 

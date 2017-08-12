@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app.jsx';
+import RecentlyEvents from './RecentlyEvents.jsx';
 
 window.callback = (data) => {
   ReactDOM.render(
-    <App />, document.getElementById('app')
+    <RecentlyEvents data={data}/>,
+    document.getElementById('recently_events')
   );
 };
