@@ -9,7 +9,7 @@ export default class RecentlyEvents extends React.Component {
 
   render() {
     return (
-      <ul>
+      <ul className="trb-list events">
         {
           this.props.data.events.map((event, index) => (
             <li key={index}>
