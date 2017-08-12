@@ -14,7 +14,7 @@
     "url": "git+ssh://git@github.com/toyamarb/toyamarb.github.io.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/toyamarb/toyamarb.github.io/issues"
   },
