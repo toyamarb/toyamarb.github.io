@@ -1,12 +1,8 @@
 import React from 'react';
 import moment from 'moment';
+import { DateTimeComponent, TimeComponent } from './components/FormattedDate.jsx';  
 
 export default class NextEvent extends React.Component {
-
-  formatDate(dateString) {
-    return moment(dateString).format('YYYY/MM/DD');
-  }
-
   render() {
     const event = this.props.data.events[0];
 
@@ -23,7 +19,7 @@ export default class NextEvent extends React.Component {
           <span className="icon is-small">
             <i className="fa fa-calendar"></i>
           </span>
-          {event.started_at}-{event.ended_at}<br />
+          <DateTimeComponent dateString={event.started_at} />-<TimeComponent dateString={event.ended_at} /><br />
         </span>
         <span className="place">
           <span className="icon is-small">
