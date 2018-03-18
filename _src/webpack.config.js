@@ -2,9 +2,12 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './entry.js',
+  entry: {
+    'bundle': './entry.js',
+    'serviceWorker': './serviceWorker.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, '../')
   },
   module: {
