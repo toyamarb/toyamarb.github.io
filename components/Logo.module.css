@@ -1,0 +1,28 @@
+.svg {
+  fill: #fff;
+  animation: fill 2s forwards;
+}
+
+.path {
+  stroke: #333;
+  stroke-width: 1px;
+  stroke-dasharray: 700px;
+  stroke-dashoffset: 700px;
+  animation: draw 1.2s linear forwards;
+}
+
+@keyframes fill {
+  70% {
+    fill: #fff;
+  }
+
+  100% {
+    fill: #333;
+  }
+}
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
