@@ -21,11 +21,7 @@ export const NextEvent: React.VFC<{
           <span className="text-[20px] mb-2 hover:underline flex items-center">
             {event ? (
               <>
-                <a
-                  href={event.event_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={event.url} target="_blank" rel="noopener noreferrer">
                   {event.title}
                 </a>
                 <ExternalLinkIcon className="h-5 w-5 ml-1" />
@@ -36,11 +32,7 @@ export const NextEvent: React.VFC<{
             <CalendarIcon className="h-5 w-5 mr-1" />
             {event ? (
               <>
-                <span className="mr-1">
-                  <FormattedDate date={event.started_at} />
-                </span>
-                <FormattedHour date={event.started_at} />-
-                <FormattedHour date={event.ended_at} />
+                <span className="mr-1">{event.schedule}</span>
               </>
             ) : null}
           </p>
