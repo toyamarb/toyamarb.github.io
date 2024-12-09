@@ -1,4 +1,3 @@
-import fetchJsonp from "fetch-jsonp";
 import { useEffect, useState } from "react";
 import { NextEvent } from "./NextEvent";
 import { RecentlyEvents } from "./RecentlyEvents";
@@ -10,14 +9,8 @@ export const Events: React.VFC = () => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetchJsonp(
-        "https://connpass.com/api/v1/event/?series_id=2557&order=3&count=4"
-      );
-
-      const json = await res.json();
-
-      const [nextEvent, ...recenctlyEvents] = json.events;
-
+      const res = await fetch("https://feed-api.mugi-uno.workers.dev/feed");
+      const [nextEvent, ...recenctlyEvents] = await res.json();
       setNextEvent(nextEvent);
       setRecentlyEvents(recenctlyEvents);
     })();

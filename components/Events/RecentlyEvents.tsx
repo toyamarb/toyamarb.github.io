@@ -15,15 +15,9 @@ export const RecentlyEvents: React.VFC<{
         ? props.events.map((event, index) => (
             <div key={index} className="mt-2 flex">
               <CheckIcon className="h-5 w-5 mr-1" />
-              <span className="mx-1">
-                <FormattedDate date={event.started_at} />
-              </span>
+              <span className="mx-1">{event.schedule}</span>
               <span className="flex items-center hover:underline">
-                <a
-                  href={event.event_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={event.url} target="_blank" rel="noopener noreferrer">
                   {event.title}
                 </a>
                 <ExternalLinkIcon className="h-4 w-4 ml-1" />
